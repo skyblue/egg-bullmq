@@ -1,0 +1,60 @@
+{
+  "name": "@skyblue/egg-bullmq",
+  "version": "0.0.4",
+  "description": "BullMQ queue plugin for Egg.js.",
+  "eggPlugin": {
+    "name": "bullmq",
+    "dependencies": [
+      "redis"
+    ]
+  },
+  "keywords": [
+    "egg",
+    "eggPlugin",
+    "egg-plugin"
+  ],
+  "dependencies": {
+    "bullmq": "^1.8",
+    "egg-redis": "^2.4.0"
+  },
+  "devDependencies": {
+    "egg": "^2.0.0",
+    "egg-bin": "^4.3.0",
+    "egg-mock": "^4.0.0"
+  },
+  "engines": {
+    "node": ">=8.9.0"
+  },
+  "scripts": {
+    "test": "npm run lint -- --fix && npm run test-local",
+    "test-local": "egg-bin test",
+    "cov": "egg-bin cov",
+    "lint": "eslint ",
+    "ci": "npm run lint && npm run cov"
+  },
+  "files": [
+    "config",
+    "lib",
+    "app.js",
+    "agent.js",
+    "index.d.ts"
+  ],
+  "ci": {
+    "version": "8, 9"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/skyblue/egg-bullmq.git"
+  },
+  "bugs": {
+    "url": "https://github.com/skyblue/egg-bullmq/issues"
+  },
+  "homepage": "https://github.com/skyblue/egg-bullmq#readme",
+  "author": "skyblue",
+  "license": "MIT",
+  "main": "app.js",
+  "directories": {
+    "lib": "lib",
+    "test": "test"
+  }
+}

@@ -31,7 +31,7 @@ Base on [egg-bull-queue](https://github.com/brickyang/egg-bull)
 ## Install
 
 ```bash
-$ npm i @skyblue/egg-bullmq --save
+$ npm i egg-bullmq --save
 
 ```
 
@@ -41,7 +41,7 @@ $ npm i @skyblue/egg-bullmq --save
 // {app_root}/config/plugin.js
 exports.bullmq = {  // plugin name is 'bull'
   enable: true,
-  package: '@skyblue/egg-bullmq', // package name is '@skyblue/egg-bullmq'
+  package: 'egg-bullmq', // package name is 'egg-bullmq'
 };
 ```
 

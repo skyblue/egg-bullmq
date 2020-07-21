@@ -25,7 +25,7 @@
 ## 安装
 
 ```bash
-$ npm i @skyblue/egg-bullmq --save
+$ npm i egg-bullmq --save
 ```
 
 ## 使用
@@ -34,7 +34,7 @@ $ npm i @skyblue/egg-bullmq --save
 // {app_root}/config/plugin.js
 exports.bullmq = {  // 插件名称是 'bullmq'
   enable: true,
-  package: '@skyblue/egg-bullmq'
+  package: 'egg-bullmq'
 };
 ```
 

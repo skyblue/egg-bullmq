@@ -1,6 +1,6 @@
 {
-  "name": "@skyblue/egg-bullmq",
-  "version": "0.0.4",
+  "name": "egg-bullmq",
+  "version": "0.0.5",
   "description": "BullMQ queue plugin for Egg.js.",
   "eggPlugin": {
     "name": "bullmq",

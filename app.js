@@ -1,7 +1,6 @@
-'use strict'
 
 const { Worker, QueueEvents } = require('bullmq')
-const queue = require('./lib/bullmq')
+const createQueue = require('./lib/bullmq')
 
 class AppBootHook {
   constructor (app) {
@@ -13,7 +12,7 @@ class AppBootHook {
     // 可以用来加载应用自定义的文件，启动自定义的服务
     const { app } = this
     if (app.config.bullmq.app) {
-      queue(app)
+      createQueue(app)
     }
   }
 
@@ -26,6 +25,8 @@ class AppBootHook {
     // 应用已经启动完毕
     // app.ready 中的代码置于此处。
 
+    this.app.bullmq.Worker = Worker
+    this.app.bullmq.QueueEvents = QueueEvents
     this.app.bullmq.WorkerClass = Worker
     this.app.bullmq.QueueEventsClass = QueueEvents
   }

@@ -14,4 +14,8 @@ declare module 'egg' {
       default?: IBullConfig;
     };
   }
+
+  interface Application {
+    bullmq: any;
+  }
 }

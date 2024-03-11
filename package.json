@@ -1,6 +1,6 @@
 {
-  "name": "egg-bullmq",
-  "version": "0.0.7",
+  "name": "@yuu2lee4/egg-bullmq",
+  "version": "0.0.9",
   "description": "BullMQ queue plugin for Egg.js.",
   "eggPlugin": {
     "name": "bullmq",
@@ -44,13 +44,13 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/skyblue/egg-bullmq.git"
+    "url": "git+https://github.com/yuu2lee4/egg-bullmq.git"
   },
   "bugs": {
-    "url": "https://github.com/skyblue/egg-bullmq/issues"
+    "url": "https://github.com/yuu2lee4/egg-bullmq/issues"
   },
-  "homepage": "https://github.com/skyblue/egg-bullmq#readme",
-  "author": "skyblue",
+  "homepage": "https://github.com/yuu2lee4/egg-bullmq#readme",
+  "author": "yuu2lee4",
   "license": "MIT",
   "main": "app.js",
   "directories": {

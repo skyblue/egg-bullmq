@@ -1,5 +1,4 @@
 const createQueue = require('./lib/bullmq')
-const { Worker } = require('bullmq')
 
 module.exports = agent => {
   agent.logger.info('[egg-bullmq] plugin init')

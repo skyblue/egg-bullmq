@@ -6,12 +6,16 @@ interface IBullConfig extends QueueOptions {
 
 declare module 'egg' {
   interface EggAppConfig {
-    bull: {
+    bullmq: {
       client?: IBullConfig;
       clients?: {
         [key: string]: IBullConfig;
       };
       default?: IBullConfig;
     };
+  }
+
+  interface Application {
+    bullmq: any;
   }
 }

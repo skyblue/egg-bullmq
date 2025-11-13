@@ -12,11 +12,11 @@ module.exports = agent => {
   class QueueStrategy extends agent.ScheduleStrategy {
     start () {
       const { schedule: { queue: queueName, worker } } = this
-      const { default: { redis } } = config
+      const { default: { redis: connection } } = config
       if (worker === 'all') {
-        this.sendAll({ redis, queueName })
+        this.sendAll({ redis: connection, connection, queueName })
       } else if (worker === 'one') {
-        this.sendOne({ redis, queueName })
+        this.sendOne({ redis: connection, connection, queueName })
       } else {
         throw new Error(`[egg-bullmq] unknow worker type ${worker}`)
       }
@@ -28,12 +28,11 @@ module.exports = agent => {
   class QueueWorkFlowStrategy extends agent.ScheduleStrategy {
     start () {
       const { schedule: { queue: queueName, worker } } = this
-      const { default: { redis } } = config
-      if (worker === 'one') {
-        this.sendOne({ redis, queueName })
-      } else {
+      const { default: { redis: connection } } = config
+      if (worker !== 'one') {
         throw new Error('[egg-bullmq] workflow pattern only support `one`')
       }
+      this.sendOne({ redis: connection, connection, queueName })
     }
   }
 
